@@ -82,6 +82,8 @@ function blockScrollStrategy (data: ScrollStrategyData, props: StrategyProps) {
 
   const scrollableParent = (el => hasScrollbar(el) && el)(offsetParent || document.documentElement)
   if (scrollableParent) {
+    console.log("data",data)
+    console.log("scrollableParent",scrollableParent)
     data.root.value!.classList.add('v-overlay--scroll-blocked')
   }
 
